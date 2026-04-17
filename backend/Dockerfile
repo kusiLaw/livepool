@@ -1,6 +1,8 @@
-FROM python:3.12-slim
+FROM python:3.12-slim  
+# container is a empty computer, install linux, install python 3.12
 
-WORKDIR /app
+# create the working directory to /app in the container
+WORKDIR /app 
 
 # Install deps first (Docker layer caching — only re-runs if requirements.txt changes)
 COPY requirements.txt .
